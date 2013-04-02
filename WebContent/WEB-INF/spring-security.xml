@@ -1,0 +1,41 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security" xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:security="http://www.springframework.org/schema/security"
+
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+       	http://www.springframework.org/schema/security 
+       	http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+	<beans:bean id="successAuthentication" class="com.microblog.authentication.SuccessAuthentication" />
+	<beans:bean id="failureAuthentication" class="com.microblog.authentication.FailureAuthentication" />
+
+	<http auto-config="true">
+		<intercept-url pattern="/userpage*" access="ROLE_USER" />
+		<intercept-url pattern="/userpage/*" access="ROLE_USER" />
+		<intercept-url pattern="/subscription*" access="ROLE_USER" />
+		<intercept-url pattern="/subscription/*" access="ROLE_USER" />
+		<intercept-url pattern="/subscribed*" access="ROLE_USER" />
+		<intercept-url pattern="/subscribed/*" access="ROLE_USER" />
+		<form-login login-page="/login" authentication-success-handler-ref="successAuthentication" authentication-failure-handler-ref="failureAuthentication"  
+			username-parameter="username" password-parameter="password" login-processing-url="/login_processing_url" />
+		<security:logout logout-url="/logout_processing_url" />
+	</http>
+
+	<authentication-manager>
+		<authentication-provider user-service-ref='userDataService'>
+			<password-encoder hash="sha-256">
+				<salt-source ref="saltSource" />
+			</password-encoder>
+		</authentication-provider>
+	</authentication-manager>
+
+	<beans:bean class="org.springframework.security.authentication.dao.ReflectionSaltSource" id="saltSource">
+		<beans:property name="userPropertyToUse" value="username" />
+	</beans:bean>
+
+	<beans:bean id="userDataService" class="com.microblog.authentication.UserDataService">
+		<beans:property name="userDao" ref="userDao" />
+	</beans:bean>
+
+</beans:beans>

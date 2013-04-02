@@ -1,0 +1,88 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security" 
+    xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:tx="http://www.springframework.org/schema/tx" 
+	xmlns:jd="http://www.springframework.org/schema/jdbc"
+
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+         http://www.springframework.org/schema/tx 
+         http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+		 http://www.springframework.org/schema/jdbc
+      	 http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd">
+
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+
+	<beans:bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<beans:property name="sessionFactory" ref="sessionFactory" />
+	</beans:bean>
+
+	<beans:bean id="userDao" class="com.microblog.dao.hibernate.UserHibernate">
+		<beans:property name="sessionFactory" ref="sessionFactory" />
+	</beans:bean>
+
+	<beans:bean id="postDao" class="com.microblog.dao.hibernate.PostHibernate">
+		<beans:property name="sessionFactory" ref="sessionFactory" />
+	</beans:bean>
+
+	<beans:bean id="subscriptionDao" class="com.microblog.dao.hibernate.SubscriptionHibernate">
+		<beans:property name="sessionFactory" ref="sessionFactory" />
+	</beans:bean>
+
+	<beans:bean id="userManager" class="com.microblog.business.UserManager">
+		<beans:property name="userDao" ref="userDao" />
+		<beans:property name="subscriptionDao" ref="subscriptionDao" />
+	</beans:bean>
+
+	<beans:bean id="postManager" class="com.microblog.business.PostManager">
+		<beans:property name="userDao" ref="userDao" />
+		<beans:property name="postDao" ref="postDao" />
+		<beans:property name="subscriptionDao" ref="subscriptionDao" />
+	</beans:bean>
+
+	<beans:bean id="subscriptionManager" class="com.microblog.business.SubscriptionManager">
+		<beans:property name="userDao" ref="userDao" />
+		<beans:property name="subscriptionDao" ref="subscriptionDao" />
+	</beans:bean>
+
+	<beans:beans profile="test">
+		<beans:bean id="hSqlDataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource" >
+			<beans:property name="driverClass" value="org.hsqldb.jdbcDriver" />
+<!-- 			<beans:property name="url" value="jdbc:hsqldb:hsql://localhost" /> -->
+			<beans:property name="url" value="jdbc:hsqldb:mem:."/>
+			<beans:property name="username" value="sa" />
+			<beans:property name="password" value="" />
+		</beans:bean>
+
+		<beans:bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+			<beans:property name="dataSource" ref="hSqlDataSource" />
+			<beans:property name="configLocation">
+				<beans:value>
+					hibernateTest.cfg.xml
+				</beans:value>
+			</beans:property>
+		</beans:bean>
+	</beans:beans>
+
+	<beans:beans profile="production">
+		<beans:bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+			<beans:property name="driverClassName" value="org.postgresql.Driver" />
+			<beans:property name="url" value="jdbc:postgresql://localhost:5432/Microblog" />
+			<beans:property name="username" value="postgres" />
+			<beans:property name="password" value="test" />
+			<beans:property name="defaultAutoCommit" value="false" />
+		</beans:bean>
+
+		<beans:bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+			<beans:property name="dataSource" ref="dataSource" />
+			<beans:property name="configLocation">
+				<beans:value>
+					WEB-INF/hibernate.cfg.xml
+				</beans:value>
+			</beans:property>
+		</beans:bean>
+	</beans:beans>
+	
+</beans:beans>

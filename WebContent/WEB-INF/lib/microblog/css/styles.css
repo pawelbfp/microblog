@@ -1,0 +1,112 @@
+.leftTopMargin {
+	margin-top: 100px;
+}
+
+.formStyle {
+	background: none repeat scroll 0 0 wheat;
+}
+
+.listItem {
+	display: list-item;
+	max-width: 100px;
+}
+
+.iframeStyle {
+	border: medium none;
+	overflow: hidden;
+	height: 400px;
+	width: 520px;
+	padding : 10px;
+}
+
+.postContainer{
+    height: 300px;
+    overflow: auto;
+}
+
+.post {
+	background-color: silver;
+	border: 2px inset powderblue;
+	border-top-left-radius: 10px 5px;
+	border-bottom-right-radius: 10% 5%;
+	border-top-right-radius: 10px;
+	overflow: hidden;
+}
+
+.postBody {
+	background-color: oldlace;
+	color: #1B1B1B;
+	font-size: 12px;
+	font-weight: 400;
+	font-family: Arial;
+}
+
+.postFooter {
+	border-bottom: medium none;
+	color: #8E8E8E;
+	font-size: 11px;
+	font-weight: normal;
+	margin-bottom: 0;
+	float: right;
+}
+
+.postDate {
+	padding: 10px;
+}
+
+.postOwner {
+	padding: 10px;
+}
+
+.postDelete {
+	padding: 10px;
+}
+
+.inlineBlock {
+	display: inline-block;
+}
+
+.displaytable {
+	display: table;
+}
+
+.displaycell {
+	display: table-cell;
+}
+
+.minWidth33 {
+	min-width: 33%;
+}
+
+.minWidth50 {
+	min-width: 50%;
+}
+
+.defRowHeight {
+	height: 80px;
+}
+
+.defSelecteight {
+	min-height: 340px;
+}
+
+.messgeRow {
+	padding: 10px;
+}
+
+[class*="span"] {
+	float: none;
+}
+
+.left {
+	text-align: left;
+	float: left;
+}
+
+.center {
+	text-align: center;
+}
+
+.notvisible {
+	visibility: hidden;
+}

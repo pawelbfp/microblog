@@ -1,0 +1,137 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1227" measuredH="512" mockupW="802" mockupH="512">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="425" y="0" w="802" h="512" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::SubTitle" x="775" y="109" w="114" h="-1" measuredW="99" measuredH="33" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <text>My%20posts</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Label" x="1124" y="80" w="75" h="21" measuredW="70" measuredH="21" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Hello%20user%20%21</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Label" x="945" y="157" w="134" h="21" measuredW="60" measuredH="21" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>New%20post</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Button" x="947" y="329" w="118" h="27" measuredW="102" measuredH="27" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Add%20new%20post</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Label" x="947" y="302" w="-1" h="-1" measuredW="142" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>13576743</color>
+        <text>*%20post%20cannot%20be%20empty</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Link" x="819" y="80" w="-1" h="-1" measuredW="57" measuredH="21" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>My%20posts</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Link" x="891" y="80" w="-1" h="-1" measuredW="74" measuredH="21" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Subscription</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Link" x="970" y="80" w="-1" h="-1" measuredW="139" measuredH="21" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Subscribed%20users%20posts</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::TextArea" x="947" y="183" w="200" h="119" measuredW="200" measuredH="140" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>This%20is%20some%20micro%20post.%20No%20sensible%20content%2C%20but%20it%20is%20smart.</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::FieldSet" x="552" y="183" w="295" h="272" measuredW="200" measuredH="170" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>user%20posts</text>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="__group__" x="567" y="205" w="208" h="36" measuredW="208" measuredH="36" zOrder="11" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Label" x="0" y="0" w="-1" h="-1" measuredW="208" measuredH="21" zOrder="0" locked="false" isInGroup="17">
+          <controlProperties>
+            <color>2848996</color>
+            <text>This%20is%20my%20first%20post.%20Maybe%20not%20last.</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="115" y="21" w="93" h="15" measuredW="92" measuredH="16" zOrder="1" locked="false" isInGroup="17">
+          <controlProperties>
+            <color>472931</color>
+            <size>9</size>
+            <text>2012.12.10%2010.23am</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="19" controlTypeID="__group__" x="567" y="256" w="227" h="36" measuredW="227" measuredH="36" zOrder="12" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="__group__" x="0" y="0" w="227" h="36" measuredW="227" measuredH="36" zOrder="0" locked="false" isInGroup="19">
+          <groupChildrenDescriptors>
+            <control controlID="0" controlTypeID="com.balsamiq.mockups::Label" x="0" y="0" w="-1" h="-1" measuredW="227" measuredH="21" zOrder="0" locked="false" isInGroup="0">
+              <controlProperties>
+                <color>2848996</color>
+                <text>This%20is%20my%20second%20post.%20Maybe%20not%20last.</text>
+              </controlProperties>
+            </control>
+            <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="115" y="21" w="93" h="15" measuredW="91" measuredH="16" zOrder="1" locked="false" isInGroup="0">
+              <controlProperties>
+                <color>472931</color>
+                <size>9</size>
+                <text>2012.12.11%2010.23am</text>
+              </controlProperties>
+            </control>
+          </groupChildrenDescriptors>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="20" controlTypeID="__group__" x="565" y="307" w="212" h="36" measuredW="212" measuredH="36" zOrder="13" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Label" x="0" y="0" w="-1" h="-1" measuredW="212" measuredH="21" zOrder="0" locked="false" isInGroup="20">
+          <controlProperties>
+            <color>2848996</color>
+            <text>This%20is%20my%20third%20post.%20Maybe%20not%20last.</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="115" y="21" w="93" h="15" measuredW="91" measuredH="16" zOrder="1" locked="false" isInGroup="20">
+          <controlProperties>
+            <color>472931</color>
+            <size>9</size>
+            <text>2012.12.12%2010.23am</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="21" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="847" y="188" w="-1" h="263" measuredW="16" measuredH="100" zOrder="14" locked="false" isInGroup="-1"/>
+    <control controlID="23" controlTypeID="com.balsamiq.mockups::Label" x="733" y="157" w="20" h="21" measuredW="22" measuredH="21" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>to%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="24" controlTypeID="com.balsamiq.mockups::Label" x="552" y="156" w="68" h="21" measuredW="68" measuredH="21" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Date%20from%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="25" controlTypeID="com.balsamiq.mockups::DateChooser" x="620" y="155" w="98" h="-1" measuredW="114" measuredH="25" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>12/12/10%20%20%20%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="26" controlTypeID="com.balsamiq.mockups::DateChooser" x="753" y="155" w="101" h="-1" measuredW="103" measuredH="25" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>12/12/12%20</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
