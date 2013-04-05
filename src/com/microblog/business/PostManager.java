@@ -10,6 +10,8 @@ import com.microblog.dao.PostDao;
 import com.microblog.dao.SubscriptionDao;
 import com.microblog.dao.UserDao;
 
+	/**
+	*/
 public class PostManager {
 
 	private PostDao postDao;
